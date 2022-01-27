@@ -15,12 +15,19 @@ const app = new Vue ({
     },
     methods: {
         nextPic() {
-            this.currentIndex += 1;
+            if (this.currentIndex !== this.images.length - 1) {
+                this.currentIndex += 1;
+            } else {
+                this.currentIndex = 0;
+            }
         },
 
         prevPic() {
-            this.currentIndex -= 1;
+            if (this.currentIndex !== 0) {
+                this.currentIndex -= 1;
+            } else {
+                this.currentIndex = this.images.length - 1;}
+            }
         }
 
-    }
 })
