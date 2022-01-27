@@ -14,6 +14,13 @@ const app = new Vue ({
         ]
     },
     methods: {
+        nextPic() {
+            this.currentIndex += 1;
+        },
+
+        prevPic() {
+            this.currentIndex -= 1;
+        }
 
     }
 })
