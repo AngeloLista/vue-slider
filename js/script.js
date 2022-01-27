@@ -43,16 +43,16 @@ const app = new Vue ({
         },
 
         stopAutoPlay() {
-            clearInterval(autoPlayInterval)
+            clearInterval(autoPlayInterval);
         },
 
         startAutoPlay() {
-            autoPlayInterval = setInterval(this.nextPic, 3000)
+            autoPlayInterval = setInterval(this.nextPic, 3000);
         }
         
     },
     created() {
-        autoPlayInterval = setInterval(this.nextPic, 3000)
+        autoPlayInterval = setInterval(this.nextPic, 3000);
     }
 
 })
