@@ -14,6 +14,14 @@ const app = new Vue ({
         ]
     },
     methods: {
+        isActive(index) {
+            if (this.currentIndex === index) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+
         nextPic() {
             if (this.currentIndex !== this.images.length - 1) {
                 this.currentIndex += 1;
