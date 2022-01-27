@@ -41,10 +41,18 @@ const app = new Vue ({
         dotSelector(index) {
             this.currentIndex = index;
         },
+
+        stopAutoPlay() {
+            clearInterval(autoPlayInterval)
+        },
+
+        startAutoPlay() {
+            autoPlayInterval = setInterval(this.nextPic, 3000)
+        }
         
     },
     created() {
-        setInterval(this.nextPic, 3000)
+        autoPlayInterval = setInterval(this.nextPic, 3000)
     }
 
 })
