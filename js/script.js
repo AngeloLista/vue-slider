@@ -26,8 +26,13 @@ const app = new Vue ({
             if (this.currentIndex !== 0) {
                 this.currentIndex -= 1;
             } else {
-                this.currentIndex = this.images.length - 1;}
+                this.currentIndex = this.images.length - 1;
             }
+        },
+
+        dotSelector(index) {
+            this.currentIndex = index;
         }
+    }
 
 })

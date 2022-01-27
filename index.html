@@ -30,10 +30,7 @@
 
             <!-- Dots Selector -->
             <div class="slider-dots">
-              <div class="dot mx-2 active"></div>
-              <div class="dot mx-2"></div>
-              <div class="dot mx-2"></div>
-              <div class="dot mx-2"></div>
+              <div v-for="(image, index) in images" class="dot mx-2" @click="dotSelector(index)"></div>
             </div>
           </div>
         </div>
