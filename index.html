@@ -13,6 +13,7 @@
     integrity='sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w=='
     crossorigin='anonymous' />
   <link rel="stylesheet" href="css/style.css" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
 <body>
@@ -24,7 +25,10 @@
         </div>
         <div class="col-6">
           <div class="slider d-flex align-items-center">
-            <img class="img-fluid" src="images/image1.jpg" alt="" />
+            <!-- Immagini -->
+            <img v-for="image in images" class="img-fluid" :src="image" alt="" />
+
+            <!-- Dots Selector -->
             <div class="slider-dots">
               <div class="dot mx-2 active"></div>
               <div class="dot mx-2"></div>
