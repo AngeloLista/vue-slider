@@ -26,9 +26,9 @@
         <div class="col-6">
           <div class="slider d-flex align-items-center">
             <!-- Immagini -->
-            <img v-for="(image, index) in images" v-if="(currentIndex === index)" class="img-fluid" :src="image" alt="" />
+            <img v-for="(image, index) in images" v-if="(currentIndex === index)" class="img-fluid rounded-border" :src="image" alt="" />
 
-            <!-- Dots Selector -->
+            <!-- Dot Selector -->
             <div class="slider-dots">
               <div v-for="(image, index) in images" class="dot mx-2" :class="{ active: isActive(index) }" @click="dotSelector(index)"></div>
             </div>

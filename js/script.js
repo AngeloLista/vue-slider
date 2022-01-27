@@ -40,7 +40,11 @@ const app = new Vue ({
 
         dotSelector(index) {
             this.currentIndex = index;
-        }
+        },
+        
+    },
+    created() {
+        setInterval(this.nextPic, 3000)
     }
 
 })
